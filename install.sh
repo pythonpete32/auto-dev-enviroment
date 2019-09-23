@@ -115,7 +115,7 @@ function install_araon {
 function setup_dotfiles {
   echo "Setting up dotfiles..."
   cd ~
-  git clone http://github.com/jklepatch/dotfiles
+  git clone https://github.com/pythonpete32/auto-dev-enviroment/
   rm ~/.tmux.conf
   rm ~/.vimrc
   ln -s ~/.dotfiles/.vimrc ~/.vimrc 
