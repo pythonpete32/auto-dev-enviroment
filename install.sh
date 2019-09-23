@@ -108,7 +108,7 @@ function install_desktop_apps {
   apt-get install irssi #IRC client
 }
 
-function install_araon {
+function install_aragon {
     npm i -g @aragoncli
 }
 
@@ -129,6 +129,7 @@ function main() {
   install version_control_tools()
   install_text_editors()
   install_programming_languages()
+  install_aragon()
   install_desktop_apps()
   setup_dotfiles()
 }
