@@ -32,7 +32,7 @@ function install_version_control_tools {
   apt-get install git
   apt-get install gitk #Graphical git
   git config --global user.email "pythonpete32@gmail.com"
-  git config --global user.name "Python Pete"
+  git config --global user.name "pythonpete32"
 }
 
 function install_text_editors {
@@ -65,25 +65,9 @@ function install_programming_languages {
   #NVM (Node Version Manager)
   curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
   bash install_nvm.sh
-
-  #Rust 
-  #See https://www.rust-lang.org/en-US/install.html
-  curl https://sh.rustup.rs -sSf | sh
 }
 
-function install_databases {
-  echo "Installing databases..."
-  #Mysql
-  #See https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-04
-  apt-get install mysql-server
-  mysql_secure_installation
-
-  #Postgres
-  #See https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-04
-  apt-get install postgresql postgresql-contrib
-}
-
-install install_devops_tools() {
+function install_devops_tools() {
   echo "Installing devops tools...\n"
   apt-get install ansible
   apt-get install vagrant
@@ -98,14 +82,6 @@ install install_devops_tools() {
   apt-get install -y docker-ce
   usermod -aG docker ${USER}
   su - ${USER}
-}
-
-function install_desktop_apps {
-  echo "Installing desktop apps..."
-  apt-get install filezilla
-  apt-get install calibre #epub reader
-  add-apt-repository ppa:deluge-team/ppa && apt-get install deluge #bittorent client
-  apt-get install irssi #IRC client
 }
 
 function install_aragon {
@@ -129,7 +105,7 @@ function main() {
   install version_control_tools()
   install_text_editors()
   install_programming_languages()
+  install_devops_tools()
   install_aragon()
-  install_desktop_apps()
   setup_dotfiles()
 }
