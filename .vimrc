@@ -17,7 +17,7 @@ endif
 
 " Solarized Theme config
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " Enable file specific behavior like syntax highlighting and specific behavior
 filetype on
@@ -25,7 +25,7 @@ filetype plugin on
 filetype indent on
 
 " Line numbers are relative
-set relativenumber
+ set relativenumber
 
 
 """""""""""""""""""""""""""
@@ -38,19 +38,6 @@ nnoremap \ ,
 " Remap switch to normal-mode key
 inoremap ii <Esc>	
 
-" Map semi-colon to colon to enter command mode more easily
-map ; :
-noremap ;; ;
-
-" Disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
 
 "Indents
 set autoindent
@@ -125,7 +112,7 @@ cabbr <expr> %% expand('%:p:h')
 
 " Highlight current line and 80 characters limit
 set cursorline
-set colorcolumn=80
+" set colorcolumn=80
 
 " Conveniences for switching between buffers
 map gn :bn<CR>
